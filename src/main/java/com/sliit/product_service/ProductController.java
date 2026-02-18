@@ -38,7 +38,7 @@ public class ProductController {
     }
 
     @GetMapping("/{id}")
-public Product getProductById(@PathVariable Long id) {
+    public Product getProductById(@PathVariable Long id) {
     return productRepository.findById(id)
         .orElseThrow(() -> new RuntimeException("Product not found with id: " + id));
 }
